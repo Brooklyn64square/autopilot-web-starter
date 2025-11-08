@@ -12,10 +12,10 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-56 h-14">
+            <div className="relative w-80 h-20">
               <Image
                 src="/assets/logo.png"
                 alt="Autopilot"
@@ -28,24 +28,24 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/how-it-works" className="text-gray-700 hover:text-primary transition-colors">
+            <a href="#how-it-works" className="text-gray-700 hover:text-primary transition-colors scroll-smooth">
               How it Works
-            </Link>
-            <Link href="/features" className="text-gray-700 hover:text-primary transition-colors">
+            </a>
+            <a href="#features" className="text-gray-700 hover:text-primary transition-colors scroll-smooth">
               Features
-            </Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-primary transition-colors">
+            </a>
+            <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors scroll-smooth">
               Pricing
-            </Link>
-            <Link href="/case-studies" className="text-gray-700 hover:text-primary transition-colors">
+            </a>
+            <span className="text-gray-400 cursor-not-allowed">
               Case Studies
-            </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">
+            </span>
+            <span className="text-gray-400 cursor-not-allowed">
               Blog
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">
+            </span>
+            <span className="text-gray-400 cursor-not-allowed">
               Contact
-            </Link>
+            </span>
           </nav>
 
           {/* CTA Buttons */}
@@ -82,24 +82,24 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <Link href="/how-it-works" className="text-gray-700 hover:text-primary transition-colors">
+              <a href="#how-it-works" className="text-gray-700 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 How it Works
-              </Link>
-              <Link href="/features" className="text-gray-700 hover:text-primary transition-colors">
+              </a>
+              <a href="#features" className="text-gray-700 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Features
-              </Link>
-              <Link href="/pricing" className="text-gray-700 hover:text-primary transition-colors">
+              </a>
+              <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Pricing
-              </Link>
-              <Link href="/case-studies" className="text-gray-700 hover:text-primary transition-colors">
+              </a>
+              <span className="text-gray-400 cursor-not-allowed">
                 Case Studies
-              </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">
+              </span>
+              <span className="text-gray-400 cursor-not-allowed">
                 Blog
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">
+              </span>
+              <span className="text-gray-400 cursor-not-allowed">
                 Contact
-              </Link>
+              </span>
               <div className="pt-4 space-y-2">
                 <Link href="/demo" className="block">
                   <Button variant="outline" className="w-full">
