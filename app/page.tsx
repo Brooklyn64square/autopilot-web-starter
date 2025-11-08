@@ -107,7 +107,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   onClick={() => setIsModalOpen(true)}
-                  className="bg-white text-blue-600 hover:bg-gray-100"
+                  className="!bg-white !text-blue-600 hover:!bg-gray-100"
                 >
                   Get Started Demo — Free Setup
                 </Button>
