@@ -8,8 +8,8 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Autopilot - From idea to income, on autopilot',
-  description: 'Launch your business on autopilot with our comprehensive starter template',
+  title: 'Autopilot - Ship Your SaaS in Days, Not Months',
+  description: 'The ultimate Next.js starter kit for developers who want to launch SaaS products in days, not months. Built with Next.js 14, TypeScript, Tailwind CSS, and Stripe.',
 };
 
 export default function RootLayout({
