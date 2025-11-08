@@ -8,8 +8,8 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Autopilot - From idea to income, on autopilot',
-  description: 'Launch your business on autopilot with our comprehensive starter template',
+  title: 'Autopilot — From idea to income (AI brand operator)',
+  description: 'Launch a brand in hours and let Autopilot run marketing, sales, and fulfillment autonomously. Start a free 14‑day demo and see revenue-first growth.',
 };
 
 export default function RootLayout({

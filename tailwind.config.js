@@ -12,6 +12,10 @@ module.exports = {
         primary: '#0066FF',
         accent: '#2DD4BF',
         dark: '#0B1B2B',
+        'bg-page': '#F8FAFC',
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
     },
   },
