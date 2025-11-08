@@ -15,7 +15,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-[200px] h-[50px]">
+            <div className="relative w-[320px] h-[80px]">
               <Image
                 src="/assets/logo.png"
                 alt="Autopilot"
