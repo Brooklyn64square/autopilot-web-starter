@@ -1,110 +1,192 @@
-
-import { Metadata } from 'next';
 import Link from 'next/link';
-import Button from '@/components/Button';
 
-export const metadata: Metadata = {
-  title: 'Case Studies — Autopilot',
-  description: 'Real results from brands using Autopilot to grow revenue',
-};
+interface CaseStudy {
+  id: string;
+  company: string;
+  industry: string;
+  logo: string;
+  challenge: string;
+  solution: string;
+  results: {
+    metric: string;
+    value: string;
+  }[];
+  testimonial: {
+    quote: string;
+    author: string;
+    role: string;
+  };
+}
+
+const caseStudies: CaseStudy[] = [
+  {
+    id: '1',
+    company: 'TechFlow',
+    industry: 'SaaS',
+    logo: '💼',
+    challenge: 'TechFlow needed to launch their MVP quickly to validate their product-market fit, but building from scratch would take months.',
+    solution: 'Using Autopilot, they deployed a production-ready application with payment processing, authentication, and email workflows in just 3 days.',
+    results: [
+      { metric: 'Time to Market', value: '3 days' },
+      { metric: 'Development Cost', value: '-85%' },
+      { metric: 'MRR after 3 months', value: '$12,000' },
+    ],
+    testimonial: {
+      quote: 'Autopilot saved us months of development time. We went from idea to paying customers in less than a week.',
+      author: 'Sarah Chen',
+      role: 'Founder & CEO, TechFlow',
+    },
+  },
+  {
+    id: '2',
+    company: 'FitnessPro',
+    industry: 'Health & Wellness',
+    logo: '🏋️',
+    challenge: 'FitnessPro wanted to pivot their business model to subscription-based coaching but lacked the technical infrastructure.',
+    solution: 'Autopilot provided the complete foundation including Stripe subscriptions, user management, and automated email sequences for onboarding.',
+    results: [
+      { metric: 'Launch Time', value: '5 days' },
+      { metric: 'Active Subscribers', value: '500+' },
+      { metric: 'Monthly Revenue', value: '$25,000' },
+    ],
+    testimonial: {
+      quote: 'The built-in payment and authentication features meant we could focus on our content instead of infrastructure.',
+      author: 'Marcus Johnson',
+      role: 'Co-founder, FitnessPro',
+    },
+  },
+  {
+    id: '3',
+    company: 'DesignHub',
+    industry: 'Creative Services',
+    logo: '🎨',
+    challenge: 'DesignHub needed a professional platform to sell design templates and digital products but had limited technical resources.',
+    solution: 'Autopilot\'s starter template included everything needed for digital product sales, from payment processing to instant digital delivery.',
+    results: [
+      { metric: 'Setup Time', value: '2 days' },
+      { metric: 'Products Sold', value: '1,200+' },
+      { metric: 'Revenue (First Quarter)', value: '$45,000' },
+    ],
+    testimonial: {
+      quote: 'As a designer, I was able to launch a fully functional e-commerce platform without writing a single line of code.',
+      author: 'Elena Rodriguez',
+      role: 'Founder, DesignHub',
+    },
+  },
+  {
+    id: '4',
+    company: 'LearnFast',
+    industry: 'Education Technology',
+    logo: '📚',
+    challenge: 'LearnFast wanted to create an online course platform but needed advanced features like subscription management and content gating.',
+    solution: 'They customized Autopilot\'s authentication and payment flows to create a comprehensive learning management system.',
+    results: [
+      { metric: 'Development Time', value: '1 week' },
+      { metric: 'Enrolled Students', value: '2,500+' },
+      { metric: 'Course Completion Rate', value: '78%' },
+    ],
+    testimonial: {
+      quote: 'Starting with Autopilot meant we could spend our time creating great content instead of building infrastructure.',
+      author: 'David Park',
+      role: 'CEO, LearnFast',
+    },
+  },
+];
 
 export default function CaseStudiesPage() {
-  const caseStudies = [
-    {
-      title: "Indie Maker Triples Revenue in 90 Days",
-      industry: "DTC Accessories",
-      challenge: "Low conversion rate and manual marketing taking 20+ hours/week",
-      results: [
-        "Revenue increased 3× in 90 days",
-        "Conversion rate improved from 1.6% to 4.8%",
-        "Time spent on marketing reduced to 2 hours/week",
-        "First payback in 42 days"
-      ],
-      quote: "Autopilot launched our brand in two days and tripled monthly revenue in three months.",
-      author: "Maya R., Founder"
-    },
-    {
-      title: "Local Service Business Goes National",
-      industry: "Home Services",
-      challenge: "Limited to local market, inconsistent lead generation",
-      results: [
-        "Expanded to 15 new markets in 6 months",
-        "Lead cost decreased by 60%",
-        "Booking rate increased by 40%",
-        "Revenue up 250% year-over-year"
-      ],
-      quote: "We let the Autopilot run our ads and it paid back in under 60 days.",
-      author: "Leo S., DTC Founder"
-    },
-    {
-      title: "Creator Launches Product Line",
-      industry: "Creator Economy",
-      challenge: "Audience but no ecommerce infrastructure",
-      results: [
-        "Launched brand in 48 hours",
-        "First month: $28K in revenue",
-        "60% repeat customer rate",
-        "4.5% conversion rate from day one"
-      ],
-      quote: "I went from idea to first sale in under a week. Autopilot handled everything.",
-      author: "Jordan T., Content Creator"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-50 to-teal-50 py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-            Real Results
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            Success Stories
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how brands are using Autopilot to launch faster and grow revenue
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            See how businesses are using Autopilot to launch faster, scale smarter, and focus on what matters most — their customers.
           </p>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="bg-white py-12 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-gray-600">Projects Launched</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">$2M+</div>
+              <div className="text-gray-600">Revenue Generated</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">85%</div>
+              <div className="text-gray-600">Time Saved</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">98%</div>
+              <div className="text-gray-600">Customer Satisfaction</div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Case Studies */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-16">
+        <div className="max-w-7xl mx-auto space-y-20">
           {caseStudies.map((study, index) => (
-            <div key={index} className="bg-white rounded-2xl border-2 border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="p-8 lg:p-12">
-                <div className="mb-6">
-                  <span className="text-sm text-primary font-semibold">{study.industry}</span>
-                  <h2 className="text-3xl font-bold text-gray-900 mt-2">
-                    {study.title}
-                  </h2>
-                </div>
+            <div
+              key={study.id}
+              className={`bg-white rounded-2xl shadow-lg overflow-hidden ${
+                index % 2 === 0 ? '' : ''
+              }`}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12">
+                {/* Content */}
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="text-5xl">{study.logo}</div>
+                    <div>
+                      <h2 className="text-3xl font-bold text-gray-900">{study.company}</h2>
+                      <p className="text-gray-600">{study.industry}</p>
+                    </div>
+                  </div>
 
-                <div className="grid lg:grid-cols-2 gap-8 mb-8">
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-3">The Challenge</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">The Challenge</h3>
                     <p className="text-gray-600">{study.challenge}</p>
                   </div>
+
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-3">The Results</h3>
-                    <ul className="space-y-2">
-                      {study.results.map((result, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <svg className="h-6 w-6 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span className="text-gray-700">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">The Solution</h3>
+                    <p className="text-gray-600">{study.solution}</p>
+                  </div>
+
+                  {/* Testimonial */}
+                  <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+                    <p className="text-gray-700 italic mb-4">"{study.testimonial.quote}"</p>
+                    <div>
+                      <p className="font-semibold text-gray-900">{study.testimonial.author}</p>
+                      <p className="text-sm text-gray-600">{study.testimonial.role}</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-xl">
-                  <p className="text-lg text-gray-700 italic mb-3">
-                    "{study.quote}"
-                  </p>
-                  <p className="text-gray-900 font-semibold">
-                    — {study.author}
-                  </p>
+                {/* Results */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-gray-900">Key Results</h3>
+                  <div className="space-y-4">
+                    {study.results.map((result, resultIndex) => (
+                      <div
+                        key={resultIndex}
+                        className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl"
+                      >
+                        <div className="text-3xl font-bold text-blue-600 mb-2">{result.value}</div>
+                        <div className="text-gray-700 font-medium">{result.metric}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -112,20 +194,27 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-teal-50">
+      {/* CTA Section */}
+      <section className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to write your success story?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Start your free 14-day trial and see what Autopilot can do for you
+          <h2 className="text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join hundreds of entrepreneurs who have launched successful businesses with Autopilot.
           </p>
-          <Link href="/">
-            <Button size="lg">
-              Start Autopilot Demo — Free 14‑day
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors inline-block"
+            >
+              Get Started Now
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors inline-block"
+            >
+              Contact Sales
+            </Link>
+          </div>
         </div>
       </section>
     </div>

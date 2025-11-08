@@ -37,15 +37,15 @@ export default function Header() {
             <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors scroll-smooth">
               Pricing
             </a>
-            <span className="text-gray-400 cursor-not-allowed">
+            <Link href="/case-studies" className="text-gray-700 hover:text-primary transition-colors">
               Case Studies
-            </span>
-            <span className="text-gray-400 cursor-not-allowed">
+            </Link>
+            <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">
               Blog
-            </span>
-            <span className="text-gray-400 cursor-not-allowed">
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">
               Contact
-            </span>
+            </Link>
           </nav>
 
           {/* CTA Buttons */}
@@ -91,15 +91,15 @@ export default function Header() {
               <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Pricing
               </a>
-              <span className="text-gray-400 cursor-not-allowed">
+              <Link href="/case-studies" className="text-gray-700 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Case Studies
-              </span>
-              <span className="text-gray-400 cursor-not-allowed">
+              </Link>
+              <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Blog
-              </span>
-              <span className="text-gray-400 cursor-not-allowed">
+              </Link>
+              <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Contact
-              </span>
+              </Link>
               <div className="pt-4 space-y-2">
                 <Link href="/demo" className="block">
                   <Button variant="outline" className="w-full">
