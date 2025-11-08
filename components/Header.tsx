@@ -15,12 +15,13 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-32 h-8">
+            <div className="relative w-56 h-14">
               <Image
                 src="/assets/logo.png"
                 alt="Autopilot"
                 fill
                 className="object-contain"
+                priority
               />
             </div>
           </Link>

@@ -21,11 +21,13 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="relative h-96 lg:h-[500px] bg-blue-400/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center">
-                <div className="text-8xl mb-4">🚀</div>
-                <p className="text-blue-100 text-2xl font-semibold">Hero Image</p>
-              </div>
+            <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm">
+              <img
+                src="https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_23-2149365021.jpg"
+                alt="Modern development illustration"
+                className="w-full h-full object-cover opacity-90 mix-blend-luminosity"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 to-purple-600/40 backdrop-blur-[2px]"></div>
             </div>
           </div>
         </div>
