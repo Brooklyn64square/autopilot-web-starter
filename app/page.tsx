@@ -122,8 +122,15 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-96 lg:h-[500px] flex items-center justify-center">
-              <div className="w-full h-full bg-gradient-to-br from-blue-400 to-cyan-300 rounded-2xl shadow-2xl flex items-center justify-center">
-                <span className="text-4xl font-bold text-white/80">Hero Image</span>
+              <div className="relative w-full h-full rounded-2xl shadow-2xl overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200"
+                  alt="Modern business workspace with laptop and technology"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
