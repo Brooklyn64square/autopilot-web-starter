@@ -21,11 +21,11 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500/10 to-purple-500/10 flex items-center justify-center">
+            <div className="relative h-96 lg:h-[500px] flex items-center justify-center">
               <img
                 src="https://illustrations.popsy.co/amber/web-design.svg"
                 alt="Modern development illustration"
-                className="w-full h-full object-contain p-8"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
