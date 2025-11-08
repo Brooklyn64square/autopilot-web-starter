@@ -93,40 +93,38 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900 py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-r from-[#0066FF] to-[#00CCFF] py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-                Ship Your SaaS in Days, <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Not Months</span>
+              <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight">
+                From idea to income — on autopilot.
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
-                Autopilot is the complete Next.js starter kit with authentication, payments, and deployment—ready to go.
+              <p className="text-xl text-white/90 mb-8 max-w-2xl">
+                Launch your business faster with our production-ready Next.js starter. Everything you need to start generating income, built in.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button 
                   size="lg" 
                   onClick={() => setIsModalOpen(true)}
+                  className="bg-white text-blue-600 hover:bg-gray-100"
                 >
-                  Get Started
+                  Get Started Demo — Free Setup
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline"
                   onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="border-white text-white hover:bg-white/10"
                 >
-                  View Demo
+                  Learn More
                 </Button>
               </div>
             </div>
-            <div className="relative h-96 lg:h-[500px]">
-              <Image
-                src="/assets/hero-3x2.png"
-                alt="Autopilot Dashboard - Modern SaaS Starter Kit"
-                fill
-                className="object-contain rounded-2xl shadow-2xl"
-                priority
-              />
+            <div className="relative h-96 lg:h-[500px] flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-blue-400 to-cyan-300 rounded-2xl shadow-2xl flex items-center justify-center">
+                <span className="text-4xl font-bold text-white/80">Hero Image</span>
+              </div>
             </div>
           </div>
         </div>
